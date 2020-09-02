@@ -122,7 +122,7 @@
               "https://www.w3.org/2018/credentials/v1",
               "https://w3id.org/foodallergens/v1"
             ],
-            "id": "https://issuer.mydoctor/credentials/83627465",
+            "id": "https://authoritative.issuer/credentials/83627465",
             "type": ["VerifiableCredential", "FoodAllergyCard"],
             "issuer": "did:example:28394728934792387",
             "identifier": "83627465",
@@ -199,18 +199,26 @@
         </tr>
         <tr>
           <td>
-            FoodAllergenLabel
+            Person
           </td>
           <td>
-            Specifies that the credential is a food allergen label on a food item or package.
+            Specifies that the subject of the credential is a person with food allergies.
           </td>
         </tr>
         <tr>
           <td>
-            Person
+            FoodAllergenLabel
           </td>
           <td>
-            Specifies that the subject of the credential is a person.
+            Specifies that the credential is a food allergen label on a food or beverage item.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            FoodBeverageItem
+          </td>
+          <td>
+            Specifies that the subject of the credential is a food or beverage item.
           </td>
         </tr>
       </tbody>
@@ -349,11 +357,47 @@
         </tr>
       </tbody>
     </table>
+    
+    <section class="normative">
+      <h3>identifier</h3>
+      <p>
+        An alternate identifier used by the issuer of the credential to refer to information associated with the
+        credential.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              identifier
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              http://schema.org/identifier
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              string
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
     <section class="normative">
       <h3>FoodAllergyCard</h3>
       <p>
-        Specifies that the credential is a food allergen card.
+        Specifies that the credential is a food allergy card.
       </p>
       <table class="simple">
         <tbody>
@@ -371,6 +415,41 @@
             </td>
             <td>
               https://w3id.org/foodallergens#FoodAllergyCard
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              Class
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>Person</h3>
+      <p>
+        Specifies that the subject of the credential is a person.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              Person
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              http://schema.org/Person
             </td>
           </tr>
           <tr>
@@ -421,10 +500,9 @@
     </section>
 
     <section class="normative">
-      <h3>identifier</h3>
+      <h3>FoodBeverageItem</h3>
       <p>
-        An alternate identifier used by the issuer of the credential to refer to information associated with the
-        credential.
+        Specifies that the subject of the credential is a food or beverage item.
       </p>
       <table class="simple">
         <tbody>
@@ -433,7 +511,7 @@
               Term
             </td>
             <td>
-              identifier
+              FoodBeverageItem
             </td>
           </tr>
           <tr>
@@ -441,42 +519,7 @@
               URL
             </td>
             <td>
-              http://schema.org/identifier
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              string
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>Person</h3>
-      <p>
-        Specifies that the subject of the credential is a person.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              Person
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              http://schema.org/Person
+              https://w3id.org/foodallergens#FoodBeverageItem
             </td>
           </tr>
           <tr>
