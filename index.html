@@ -100,15 +100,15 @@
 
       <dl>
         <dt>Food Allergy Card</dt>
-        <dd>A person asserting their food allergies.</dd>
+        <dd>A person using a digital credential to assert their food allergies.</dd>
         <dt>Food Allergen Label</dt>
-        <dd>A food or beverage item indicating the presence of food allergens.</dd>
+        <dd>A digital credential affixed to a food or beverage item indicating the presence of food allergens.</dd>
       </dl>
 
     </section>
 
     <section class="informative">
-      <h3>Example</h3>
+      <h3>Example 1</h3>
 
       <p>
         The following example is provided as a simple example of when this vocabulary is used by a person to assert their food allergies:
@@ -134,6 +134,55 @@
               "givenName": "JOHN",
               "familyName": "SMITH",
               "image": "data:image/png;base64,iVBORw0KGgo...kJggg==",
+              "allergenMustard": false,
+              "allergenLactose": false,
+              "allergenEgg": false,
+              "allergenPeanut": true,
+              "allergenSoy": true,
+              "allergenGluten": true,
+              "allergenTreenut": true,
+              "allergenCrustacean": false,
+              "allergenShellfish": false,
+              "allergenFish": false,
+              "allergenSesame": false,
+              "allergenSulphites": false
+            },
+            "proof": {
+              "type": "Ed25519Signature2018",
+              "created": "2020-01-30T03:32:15Z",
+              "jws": "eyJhbGciOiJFZERTQSIsI...wRG2fNmAx60Vi4Ag",
+              "proofPurpose": "assertionMethod",
+              "verificationMethod": "did:example:28394728934792387#keys-7f83he7s8"
+            }
+          }
+        </pre>
+
+    </section>
+
+    <section class="informative">
+      <h3>Example 2</h3>
+
+      <p>
+        The following example is provided as a simple example of when this vocabulary is used to indicate the presence of food allergens in a food or beverage item:
+      </p>
+
+      <pre class="example">
+          {
+            "@context": [
+              "https://www.w3.org/2018/credentials/v1",
+              "https://w3id.org/foodallergens/v1"
+            ],
+            "id": "https://authoritative.issuer/credentials/83627465",
+            "type": ["VerifiableCredential", "FoodAllergenLabel"],
+            "issuer": "did:example:28394728934792387",
+            "identifier": "83627465",
+            "name": "Food Allergen Label",
+            "description": "Food Allergen Credential",
+            "issuanceDate": "2020-08-15T12:20:25Z",
+            "expirationDate": "2029-08-15T12:20:25Z",
+            "credentialSubject": {
+              "id": "did:example:b34ca6cd37bbf23",
+              "type": "FoodBeverageItem",
               "allergenMustard": false,
               "allergenLactose": false,
               "allergenEgg": false,
