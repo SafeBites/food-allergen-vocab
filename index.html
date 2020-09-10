@@ -122,7 +122,7 @@
           {
             "@context": [
               "https://www.w3.org/2018/credentials/v1",
-              "https://w3id.org/foodallergens/v1"
+              "https://w3id.org/foodallergen/v1"
             ],
             "id": "https://authoritative.issuer/credentials/83627465",
             "type": ["VerifiableCredential", "FoodAllergyCard"],
@@ -170,7 +170,7 @@
           {
             "@context": [
               "https://www.w3.org/2018/credentials/v1",
-              "https://w3id.org/foodallergens/v1"
+              "https://w3id.org/foodallergen/v1"
             ],
             "id": "https://authoritative.issuer/credentials/83627465",
             "type": ["VerifiableCredential", "FoodAllergenLabel"],
@@ -246,18 +246,18 @@
         </tr>
         <tr>
           <td>
-            Person
-          </td>
-          <td>
-            Specifies that the subject of the credential is a person with food allergies.
-          </td>
-        </tr>
-        <tr>
-          <td>
             FoodAllergenLabel
           </td>
           <td>
             Specifies that the credential is a food allergen label on a food or beverage item.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Person
+          </td>
+          <td>
+            Specifies that the subject of the credential is a person with food allergies.
           </td>
         </tr>
         <tr>
@@ -285,18 +285,18 @@
       <tbody>
         <tr>
           <td>
-            givenName
-          </td>
-          <td>
-            The non-family name with which the individual identifies.
-          </td>
-        </tr>
-        <tr>
-          <td>
             familyName
           </td>
           <td>
             The name of the family with which the individual identifies.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            givenName
+          </td>
+          <td>
+            The non-family name with which the individual identifies.
           </td>
         </tr>
         <tr>
@@ -309,18 +309,10 @@
         </tr>
         <tr>
           <td>
-            allergenMustard
+            allergenCrustacean
           </td>
           <td>
-            Indicates a Mustard food allergen or allergy.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            allergenLactose
-          </td>
-          <td>
-            Indicates a Lactose food allergen or allergy.
+            Indicates a Crustacean food allergen or allergy.
           </td>
         </tr>
         <tr>
@@ -333,18 +325,10 @@
         </tr>
         <tr>
           <td>
-            allergenPeanut
+            allergenFish
           </td>
           <td>
-            Indicates a Peanut food allergen or allergy.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            allergenSoy
-          </td>
-          <td>
-            Indicates a Soy food allergen or allergy.
+            Indicates a Fish food allergen or allergy.
           </td>
         </tr>
         <tr>
@@ -356,34 +340,26 @@
         </tr>
         <tr>
           <td>
-            allergenTreenut
+            allergenLactose
           </td>
           <td>
-            Indicates a Tree Nut food allergen or allergy.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            allergenCrustacean
-          </td>
-          <td>
-            Indicates a Crustacean food allergen or allergy.
+            Indicates a Lactose food allergen or allergy.
           </td>
         </tr>
         <tr>
           <td>
-            allergenShellfish
+            allergenMustard
           </td>
           <td>
-            Indicates a Shellfish food allergen or allergy.
+            Indicates a Mustard food allergen or allergy.
           </td>
         </tr>
         <tr>
           <td>
-            allergenFish
+            allergenPeanut
           </td>
           <td>
-            Indicates an individual's allergy status in regards to Fish.
+            Indicates a Peanut food allergen or allergy.
           </td>
         </tr>
         <tr>
@@ -396,10 +372,34 @@
         </tr>
         <tr>
           <td>
+            allergenShellfish
+          </td>
+          <td>
+            Indicates a Shellfish food allergen or allergy.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            allergenSoy
+          </td>
+          <td>
+            Indicates a Soy food allergen or allergy.
+          </td>
+        </tr>
+        <tr>
+          <td>
             allergenSulphites
           </td>
           <td>
             Indicates a Sulphites food allergen or allergy.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            allergenTreenut
+          </td>
+          <td>
+            Indicates a Treenut food allergen or allergy.
           </td>
         </tr>
       </tbody>
@@ -461,7 +461,42 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#FoodAllergyCard
+              https://w3id.org/foodallergen#FoodAllergyCard
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              Class
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>FoodAllergenLabel</h3>
+      <p>
+        Specifies that the credential is a food allergen label.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              FoodAllergenLabel
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#FoodAllergenLabel
             </td>
           </tr>
           <tr>
@@ -512,41 +547,6 @@
     </section>
 
     <section class="normative">
-      <h3>FoodAllergenLabel</h3>
-      <p>
-        Specifies that the credential is a food allergen label.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              FoodAllergenLabel
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#FoodAllergenLabel
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              Class
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
       <h3>FoodBeverageItem</h3>
       <p>
         Specifies that the subject of the credential is a food or beverage item.
@@ -566,7 +566,7 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#FoodBeverageItem
+              https://w3id.org/foodallergen#FoodBeverageItem
             </td>
           </tr>
           <tr>
@@ -575,6 +575,41 @@
             </td>
             <td>
               Class
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>familyName</h3>
+      <p>
+        The name of the family with which the individual identifies.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              familyName
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              http://schema.org/familyName
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              string
             </td>
           </tr>
         </tbody>
@@ -602,40 +637,6 @@
             </td>
             <td>
               http://schema.org/givenName
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              string
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section class="normative">
-      <h3>familyName</h3>
-      <p>
-        The name of the family with which the individual identifies.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              familyName
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              http://schema.org/familyName
             </td>
           </tr>
           <tr>
@@ -686,9 +687,9 @@
     </section>
 
     <section class="normative">
-      <h3>allergenMustard</h3>
+      <h3>allergenCrustacean</h3>
       <p>
-        Indicates a Mustard food allergen or allergy.
+        Indicates a Crustacean food allergen or allergy.
       </p>
       <table class="simple">
         <tbody>
@@ -697,7 +698,7 @@
               Term
             </td>
             <td>
-              allergenMustard
+              allergenCrustacean
             </td>
           </tr>
           <tr>
@@ -705,42 +706,7 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#allergenMustard
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenLactose</h3>
-      <p>
-        Indicates a Lactose food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenLactose
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenLactose
+              https://w3id.org/foodallergen#allergenCrustacean
             </td>
           </tr>
           <tr>
@@ -775,217 +741,7 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#allergenEgg
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenPeanut</h3>
-      <p>
-        Indicates a Peanut food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenPeanut
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenPeanut
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenSoy</h3>
-      <p>
-        Indicates a Soy food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenSoy
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenSoy
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenGluten</h3>
-      <p>
-        Indicates a Gluten food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenGluten
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenGluten
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenTreenut</h3>
-      <p>
-        Indicates a Tree Nut food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenTreeNut
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenTreenut
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenCrustacean</h3>
-      <p>
-        Indicates a Crustacean food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenCrustacean
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenCrustacean
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Expected Value
-            </td>
-            <td>
-              boolean
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="normative">
-      <h3>allergenShellfish</h3>
-      <p>
-        Indicates a Shellfish food allergen or allergy.
-      </p>
-      <table class="simple">
-        <tbody>
-          <tr>
-            <td>
-              Term
-            </td>
-            <td>
-              allergenShellfish
-            </td>
-          </tr>
-          <tr>
-            <td>
-              URL
-            </td>
-            <td>
-              https://w3id.org/foodallergens#allergenShellfish
+              https://w3id.org/foodallergen#allergenEgg
             </td>
           </tr>
           <tr>
@@ -1020,7 +776,147 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#allergenFish
+              https://w3id.org/foodallergen#allergenFish
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenGluten</h3>
+      <p>
+        Indicates a Gluten food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenGluten
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenGluten
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenLactose</h3>
+      <p>
+        Indicates a Lactose food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenLactose
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenLactose
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenMustard</h3>
+      <p>
+        Indicates a Mustard food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenMustard
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenMustard
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+       <section class="normative">
+      <h3>allergenPeanut</h3>
+      <p>
+        Indicates a Peanut food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenPeanut
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenPeanut
             </td>
           </tr>
           <tr>
@@ -1055,7 +951,77 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#allergenSesame
+              https://w3id.org/foodallergen#allergenSesame
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenShellfish</h3>
+      <p>
+        Indicates a Shellfish food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenShellfish
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenShellfish
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenSoy</h3>
+      <p>
+        Indicates a Soy food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenSoy
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenSoy
             </td>
           </tr>
           <tr>
@@ -1090,7 +1056,42 @@
               URL
             </td>
             <td>
-              https://w3id.org/foodallergens#allergenSulphites
+              https://w3id.org/foodallergen#allergenSulphites
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Expected Value
+            </td>
+            <td>
+              boolean
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="normative">
+      <h3>allergenTreenut</h3>
+      <p>
+        Indicates a Tree Nut food allergen or allergy.
+      </p>
+      <table class="simple">
+        <tbody>
+          <tr>
+            <td>
+              Term
+            </td>
+            <td>
+              allergenTreenut
+            </td>
+          </tr>
+          <tr>
+            <td>
+              URL
+            </td>
+            <td>
+              https://w3id.org/foodallergen#allergenTreenut
             </td>
           </tr>
           <tr>
